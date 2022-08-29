@@ -18,6 +18,10 @@ class CreatePackagesTable extends Migration
             $table->string('country', 20);
             $table->string('vehicle', 15);
             $table->smallInteger('distance')->unsigned();
+            $table->tinyInteger('passengers')->unsigned();
+            $table->boolean('is_promo');
+            $table->mediumText('description')->nullable($value = true);
+            $table->decimal('price',8,2);
             $table->timestamps();
         });
     }
